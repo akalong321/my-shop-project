@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh Toán</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="icon" type="image/png" href="./img/ss.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        .checkout-page-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 30px;
+        }
+        .checkout-form-container, .order-summary-container {
+            background: var(--card-bg-color);
+            padding: 25px;
+            border-radius: 8px;
+        }
+        .order-summary-container h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .order-summary-container ul {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+        .order-summary-container li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: var(--text-soft-color);
+        }
+        .order-summary-container .summary-total {
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }
+        @media (max-width: 768px) {
+            .checkout-page-container {
+                grid-template-columns: 1fr;
+            }
+            .order-summary-container {
+                grid-row: 1; /* Hiển thị tóm tắt lên đầu ở mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="site-container">
+        <div class="header-bar">
+            <a href="cart.html" class="menu-btn" style="text-decoration: none; color: inherit; white-space: nowrap;">
+                <i class="fas fa-arrow-left"></i> Quay lại giỏ hàng
+            </a>
+            <form class="search-box" action="search.html" method="GET">
+                <input type="text" name="q" id="search-input" placeholder="Tìm sản phẩm...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <div class="cart-btn" id="cart-container">
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    Giỏ hàng (<span id="cart-count">0</span>)
+                </a>
+            </div>
+            <div class="theme-switcher" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+
+        <div class="main-content-wrapper">
+            <main>
+                <div class="checkout-page-container">
+                    <div class="checkout-form-container">
+                        <h2>Thông tin giao hàng</h2>
+                        <form id="checkout-form" class="checkout-box">
+                            <div class="form-group">
+                                <label for="name">Họ và tên</label>
+                                <input type="text" id="name" placeholder="Nguyễn Văn A">
+                                <small class="error-message"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Số điện thoại</label>
+                                <input type="tel" id="phone" placeholder="Số điện thoại nhận hàng">
+                                <small class="error-message"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Địa chỉ</label>
+                                <textarea id="address" placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành phố"></textarea>
+                                <small class="error-message"></small>
+                            </div>
+                            <button type="submit" class="btn-submit btn btn-green" style="width: 100%; margin-top: 15px;">Hoàn tất đơn hàng</button>
+                        </form>
+                    </div>
+                    <div class="order-summary-container">
+                         <div id="order-summary">
+                            </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-column"><h4>Về Chúng Tôi</h4><p>Shop Demo là dự án được xây dựng nhằm mục đích học tập và thực hành kỹ năng lập trình web front-end.</p></div>
+                <div class="footer-column"><h4>Hỗ Trợ Khách Hàng</h4><ul><li><a href="#">Hướng dẫn mua hàng</a></li><li><a href="#">Chính sách đổi trả</a></li></ul></div>
+                <div class="footer-column"><h4>Thông Tin Liên Hệ</h4><ul><li><i class="fas fa-phone"></i> 0919333761</li><li><i class="fas fa-envelope"></i> dauvietlongfreelancer@gmail.com</li></ul></div>
+                <div class="footer-column"><h4>Kết Nối Với Chúng Tôi</h4><div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 Bản quyền thuộc về Việt Long. All Rights Reserved.</p></div>
+        </footer>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div id="toast" class="toast"></div>
+
+    <script src="./js/common.js"></script>
+    <script src="./js/checkout.js"></script>
+</body>
+</html>

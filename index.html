@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Demo</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="icon" type="image/png" href="./img/ss.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+    <div class="site-container">
+        <div class="header-bar">
+            <div class="menu-btn" id="menu-toggle">
+                <i class="fas fa-th"></i> Danh mục
+            </div>
+            <form class="search-box" action="search.html" method="GET">
+                <input type="text" name="q" id="search-input" placeholder="Bạn muốn mua gì hôm nay?">
+                <button type="submit"><i class="fas fa-search"></i></button>
+                <div id="suggestions" class="suggestions hidden"></div>
+            </form>
+            <div class="cart-btn" id="cart-container">
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    Giỏ hàng (<span id="cart-count">0</span>)
+                </a>
+            </div>
+            <div class="theme-switcher" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+
+        <div class="main-content-wrapper">
+            <div class="main-section">
+                <div id="side-menu" class="side-menu">
+                    <ul>
+                        <li><a href="category.html?category=dienthoai"><i class="fas fa-mobile-alt"></i> Điện thoại, Tablet</a></li>
+                        <li><a href="category.html?category=laptop"><i class="fas fa-laptop"></i> Laptop</a></li>
+                        <li><a href="category.html?category=amthanh"><i class="fas fa-headphones"></i> Âm thanh, Mic thu âm</a></li>
+                        <li><a href="category.html?category=dongho"><i class="fas fa-clock"></i> Đồng hồ, Camera</a></li>
+                        <li><a href="category.html?category=dogiadung"><i class="fas fa-home"></i> Đồ gia dụng</a></li>
+                        <li><a href="category.html?category=phukien"><i class="fas fa-plug"></i> Phụ kiện</a></li>
+                        <li><a href="category.html?category=pc-manhinh"><i class="fas fa-desktop"></i> PC, Màn hình, Máy in</a></li>
+                        <li><a href="category.html?category=tv-tulanh"><i class="fas fa-tv"></i> Tivi, Máy lạnh, Tủ lạnh</a></li>
+                        <li><a href="#"><i class="fas fa-sync-alt"></i> Thu cũ đổi mới</a></li>
+                        <li><a href="#"><i class="fas fa-tag"></i> Khuyến mãi</a></li>
+                    </ul>
+                </div>
+                <div class="slider-banner-container">
+                    <div class="slider">
+                        <div class="slider-main">
+                            <div class="slides">
+                                <div class="slide active"><img src="./img/ban1.webp" alt="Banner 1"></div>
+                                <div class="slide"><img src="./img/ban2.jpg" alt="Banner 2"></div>
+                                <div class="slide"><img src="./img/ban3.webp" alt="Banner 3"></div>
+                            </div>
+                            <button class="prev">❮</button>
+                            <button class="next">❯</button>
+                        </div>
+                        <div class="slider-nav">
+                            <div class="nav-item active">IPHONE 17 SERIES</div>
+                            <div class="nav-item">AIRPODS PRO 3</div>
+                            <div class="nav-item">IPHONE AIR</div>
+                        </div>
+                    </div>
+                    <div class="right-banners">
+                        <div class="banner"><img src="./img/left1.webp" alt="Banner phải 1"></div>
+                        <div class="banner"><img src="./img/left2.webp" alt="Banner phải 2"></div>
+                        <div class="banner"><img src="./img/left3.webp" alt="Banner phải 3"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                </div>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-column"><h4>Về Chúng Tôi</h4><p>Shop Demo là dự án được xây dựng nhằm mục đích học tập và thực hành kỹ năng lập trình web front-end.</p></div>
+                <div class="footer-column"><h4>Hỗ Trợ Khách Hàng</h4><ul><li><a href="#">Hướng dẫn mua hàng</a></li><li><a href="#">Chính sách đổi trả</a></li></ul></div>
+                <div class="footer-column"><h4>Thông Tin Liên Hệ</h4><ul><li><i class="fas fa-phone"></i> 0919333761</li><li><i class="fas fa-envelope"></i> dauvietlongfreelancer@gmail.com</li></ul></div>
+                <div class="footer-column"><h4>Kết Nối Với Chúng Tôi</h4><div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 Bản quyền thuộc về Việt Long. All Rights Reserved.</p></div>
+        </footer>
+    </div>
+
+    <div id="modal-menu" class="modal-menu"></div>
+    <div class="overlay" id="overlay"></div>
+    <div id="toast" class="toast"></div>
+
+    <script src="./js/common.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
