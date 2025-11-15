@@ -9,9 +9,10 @@ Bạn có thể xem trang web hoạt động trực tiếp tại đây:
 **[Link demo của bạn (ví dụ: link GitHub Pages)]**
 
 ## 📸 Ảnh chụp màn hình
-
-![Ảnh chụp trang chủ dự án]([[Link-tới-ảnh-chụp-màn-hình-của-bạn.png](https://github.com/user-attachments/assets/c2b437cd-61f7-42a7-a1a9-bb21968e2f45)])
-
+<!DOCTYPE html>
+<html>
+<img width="1903" height="913" alt="image" src="https://github.com/user-attachments/assets/4cfc3823-6132-4393-9a0a-88123df48db6" />
+</html>
 ## 🌟 Đặc điểm nổi bật
 
 Dự án này thể hiện các kỹ năng front-end cốt lõi:
